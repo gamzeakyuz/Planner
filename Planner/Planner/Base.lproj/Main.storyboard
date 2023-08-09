@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sınavlarım-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Planner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bzm-U1-1u3">
+                                <rect key="frame" x="0.0" y="109" width="393" height="743"/>
+                                <color key="backgroundColor" red="0.87064009899999995" green="0.87045413260000004" blue="0.87843245270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="743" id="qSi-Nk-Uil"/>
+                                </constraints>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="129" id="UFq-4e-iaq" customClass="TableViewCell" customModule="Planner" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="55.333332061767578" width="353" height="129"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UFq-4e-iaq" id="2Iz-TS-RZe">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="129"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sınav Nerde?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAl-pc-nbr">
+                                                    <rect key="frame" x="50" y="68" width="282" height="18"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="dWq-Lz-Gyr">
+                                                    <rect key="frame" x="17" y="69" width="25" height="16.333333333333329"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="nSo-nn-5GG"/>
+                                                    </constraints>
+                                                    <imageReference key="image" image="location" catalog="system" renderingMode="hierarchical-single">
+                                                        <hierarchicalColors>
+                                                            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color systemColor="secondaryLabelColor"/>
+                                                            <color systemColor="tertiaryLabelColor"/>
+                                                        </hierarchicalColors>
+                                                    </imageReference>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="l4U-NV-dGk">
+                                                    <rect key="frame" x="15.999999999999998" y="96.666666666666671" width="26.333333333333329" height="19"/>
+                                                    <imageReference key="image" image="calendar.badge.clock" catalog="system" renderingMode="hierarchical-single">
+                                                        <hierarchicalColors>
+                                                            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color systemColor="secondaryLabelColor"/>
+                                                            <color systemColor="tertiaryLabelColor"/>
+                                                        </hierarchicalColors>
+                                                    </imageReference>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sınav Tarihi ve Saati" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OA-dV-d2j">
+                                                    <rect key="frame" x="50" y="98" width="282" height="20"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Bzo-jT-edW">
+                                                    <rect key="frame" x="17" y="42.333333333333336" width="25" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="19" id="jIM-Ys-vcO"/>
+                                                    </constraints>
+                                                    <imageReference key="image" image="text.viewfinder" catalog="system" renderingMode="hierarchical-single">
+                                                        <hierarchicalColors>
+                                                            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color systemColor="secondaryLabelColor"/>
+                                                            <color systemColor="tertiaryLabelColor"/>
+                                                        </hierarchicalColors>
+                                                    </imageReference>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ders Adı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Eb-On-O5F">
+                                                    <rect key="frame" x="50" y="11" width="282" height="20"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="drM-55-aIy">
+                                                    <rect key="frame" x="16" y="12.666666666666663" width="25" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="gyj-lO-Dgu"/>
+                                                    </constraints>
+                                                    <imageReference key="image" image="character.textbox" catalog="system" renderingMode="hierarchical-single">
+                                                        <hierarchicalColors>
+                                                            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color systemColor="secondaryLabelColor"/>
+                                                            <color systemColor="tertiaryLabelColor"/>
+                                                        </hierarchicalColors>
+                                                    </imageReference>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorumlu Olunan Konular" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WkE-4w-ie3">
+                                                    <rect key="frame" x="50" y="41" width="282" height="19"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Bzo-jT-edW" firstAttribute="leading" secondItem="dWq-Lz-Gyr" secondAttribute="leading" id="1mF-S6-l8H"/>
+                                                <constraint firstItem="WkE-4w-ie3" firstAttribute="leading" secondItem="xAl-pc-nbr" secondAttribute="leading" id="3GN-sf-pbh"/>
+                                                <constraint firstItem="Bzo-jT-edW" firstAttribute="trailing" secondItem="dWq-Lz-Gyr" secondAttribute="trailing" id="9wA-4g-1cm"/>
+                                                <constraint firstItem="2OA-dV-d2j" firstAttribute="top" secondItem="xAl-pc-nbr" secondAttribute="bottom" constant="12" id="Fdy-LK-uiD"/>
+                                                <constraint firstItem="drM-55-aIy" firstAttribute="trailing" secondItem="l4U-NV-dGk" secondAttribute="trailing" id="JPj-MK-Q8b"/>
+                                                <constraint firstItem="Bzo-jT-edW" firstAttribute="bottom" secondItem="WkE-4w-ie3" secondAttribute="bottom" id="Lzo-GO-rzS"/>
+                                                <constraint firstItem="dWq-Lz-Gyr" firstAttribute="top" secondItem="xAl-pc-nbr" secondAttribute="top" id="OAw-cZ-eKs"/>
+                                                <constraint firstItem="5Eb-On-O5F" firstAttribute="leading" secondItem="WkE-4w-ie3" secondAttribute="leading" id="QxK-9a-kZW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5Eb-On-O5F" secondAttribute="trailing" constant="1" id="R59-PD-DPI"/>
+                                                <constraint firstItem="WkE-4w-ie3" firstAttribute="trailing" secondItem="xAl-pc-nbr" secondAttribute="trailing" id="R9b-ir-JQ0"/>
+                                                <constraint firstItem="l4U-NV-dGk" firstAttribute="top" secondItem="dWq-Lz-Gyr" secondAttribute="bottom" constant="9" id="U2g-wX-Pp8"/>
+                                                <constraint firstItem="Bzo-jT-edW" firstAttribute="top" secondItem="WkE-4w-ie3" secondAttribute="top" id="Uim-X2-aCA"/>
+                                                <constraint firstItem="dWq-Lz-Gyr" firstAttribute="bottom" secondItem="xAl-pc-nbr" secondAttribute="bottom" id="YEG-KO-xrY"/>
+                                                <constraint firstItem="dWq-Lz-Gyr" firstAttribute="top" secondItem="Bzo-jT-edW" secondAttribute="bottom" constant="8" id="bpr-Yd-HMJ"/>
+                                                <constraint firstItem="xAl-pc-nbr" firstAttribute="leading" secondItem="2OA-dV-d2j" secondAttribute="leading" id="dqn-Si-s62"/>
+                                                <constraint firstItem="5Eb-On-O5F" firstAttribute="trailing" secondItem="WkE-4w-ie3" secondAttribute="trailing" id="eVU-oR-U96"/>
+                                                <constraint firstItem="5Eb-On-O5F" firstAttribute="leading" secondItem="drM-55-aIy" secondAttribute="trailing" constant="9" id="efv-ae-RXJ"/>
+                                                <constraint firstItem="drM-55-aIy" firstAttribute="top" secondItem="5Eb-On-O5F" secondAttribute="top" id="f4t-0r-pQJ"/>
+                                                <constraint firstItem="drM-55-aIy" firstAttribute="centerY" secondItem="5Eb-On-O5F" secondAttribute="centerY" id="fhr-1v-qjJ"/>
+                                                <constraint firstItem="Bzo-jT-edW" firstAttribute="leading" secondItem="2Iz-TS-RZe" secondAttribute="leadingMargin" constant="-3" id="gdY-rH-oxp"/>
+                                                <constraint firstItem="Bzo-jT-edW" firstAttribute="top" secondItem="drM-55-aIy" secondAttribute="bottom" constant="9.9999999999999929" id="h95-cl-gtN"/>
+                                                <constraint firstItem="drM-55-aIy" firstAttribute="leading" secondItem="2Iz-TS-RZe" secondAttribute="leadingMargin" constant="-4" id="i8O-v0-pWX"/>
+                                                <constraint firstItem="2OA-dV-d2j" firstAttribute="bottom" secondItem="2Iz-TS-RZe" secondAttribute="bottomMargin" id="kN2-gR-GMl"/>
+                                                <constraint firstItem="xAl-pc-nbr" firstAttribute="trailing" secondItem="2OA-dV-d2j" secondAttribute="trailing" id="nhb-0O-6cd"/>
+                                                <constraint firstItem="drM-55-aIy" firstAttribute="top" secondItem="2Iz-TS-RZe" secondAttribute="topMargin" id="q2b-wT-KYq"/>
+                                                <constraint firstItem="drM-55-aIy" firstAttribute="leading" secondItem="l4U-NV-dGk" secondAttribute="leading" id="wkJ-la-94f"/>
+                                                <constraint firstItem="WkE-4w-ie3" firstAttribute="leading" secondItem="Bzo-jT-edW" secondAttribute="trailing" constant="8" id="xUf-T5-cy8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateTitle" destination="2OA-dV-d2j" id="Gz7-29-pLb"/>
+                                            <outlet property="examLocationTitle" destination="xAl-pc-nbr" id="hsC-rZ-4TO"/>
+                                            <outlet property="examSubjectTitle" destination="WkE-4w-ie3" id="IrC-X4-EA3"/>
+                                            <outlet property="examTitle" destination="5Eb-On-O5F" id="4UJ-8R-DAQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hvf-fa-sHI">
+                                <rect key="frame" x="16" y="59" width="361" height="42"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="855-tb-27w">
+                                        <rect key="frame" x="301" y="7" width="49" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="plus.app.fill" catalog="system">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Ewi-TI-Tlf" kind="show" identifier="AddVC" id="xTw-WE-vXF"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SINAVLARIM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naK-lW-0YP">
+                                        <rect key="frame" x="69" y="13" width="222" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.87064009899999995" green="0.87045413260000004" blue="0.87843245270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.87064009899999995" green="0.87045413260000004" blue="0.87843245270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="bzm-U1-1u3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BnV-yb-99a"/>
+                            <constraint firstItem="hvf-fa-sHI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UZp-hB-afD"/>
+                            <constraint firstItem="bzm-U1-1u3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VQS-JH-OJD"/>
+                            <constraint firstItem="hvf-fa-sHI" firstAttribute="centerX" secondItem="bzm-U1-1u3" secondAttribute="centerX" id="Xtj-nO-adA"/>
+                            <constraint firstItem="bzm-U1-1u3" firstAttribute="top" secondItem="hvf-fa-sHI" secondAttribute="bottom" constant="8" id="hH0-cF-aQ6"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="bzm-U1-1u3" secondAttribute="bottom" constant="-34" id="w6B-d6-FjL"/>
+                            <constraint firstItem="hvf-fa-sHI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wn5-G0-qeJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sınavlarım" id="hGN-3D-cfr">
+                        <barButtonItem key="rightBarButtonItem" id="SeA-bu-GIX">
+                            <imageReference key="image" image="plus.circle.fill" catalog="system" symbolScale="large" renderingMode="hierarchical-single" variableValue="5.5511151231257827e-17">
+                                <hierarchicalColors>
+                                    <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color systemColor="secondaryLabelColor"/>
+                                    <color systemColor="tertiaryLabelColor"/>
+                                </hierarchicalColors>
+                            </imageReference>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="bzm-U1-1u3" id="wiB-Jl-aKc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5.343511450381679" y="554.92957746478874"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="nS0-0N-Sta">
+            <objects>
+                <viewController storyboardIdentifier="AddVC" id="Ewi-TI-Tlf" customClass="AddViewController" customModule="Planner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4zX-ek-jwd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yu5-D8-XkI">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hou-1T-e7x">
+                                        <rect key="frame" x="14" y="12" width="43" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="xmark.circle.fill" catalog="system" renderingMode="hierarchical-single">
+                                                <hierarchicalColors>
+                                                    <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color systemColor="secondaryLabelColor"/>
+                                                    <color systemColor="tertiaryLabelColor"/>
+                                                </hierarchicalColors>
+                                            </imageReference>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="closeButton:" destination="Ewi-TI-Tlf" eventType="touchUpInside" id="ZzT-Xb-K5V"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpV-eE-Uuc">
+                                        <rect key="frame" x="294" y="12" width="85" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Kaydet">
+                                            <fontDescription key="titleFontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="14"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="saveButton:" destination="Ewi-TI-Tlf" eventType="touchUpInside" id="nlc-4y-BVq"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ab0-Gr-cZN">
+                                        <rect key="frame" x="14" y="99" width="365" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dersin Adı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s0L-c4-KIb">
+                                                <rect key="frame" x="16" y="21" width="333" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.95294111969999995" green="0.95294111969999995" blue="0.95294123890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sorumlu Olunan Konular" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wh1-wN-FAi">
+                                                <rect key="frame" x="16" y="63" width="333" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.95294111969999995" green="0.95294111969999995" blue="0.95294123890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sınavın Bulunduğu Yer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n1q-4v-th7">
+                                                <rect key="frame" x="16" y="105" width="333" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.95294111969999995" green="0.95294111969999995" blue="0.95294123890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sınavın Tarihini ve Saatini Giriniz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPb-m2-pnO">
+                                        <rect key="frame" x="14" y="274" width="365" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H5h-40-yDm">
+                                        <rect key="frame" x="14" y="302" width="365" height="423"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="pCf-Db-ioH">
+                                                <rect key="frame" x="22" y="17" width="320" height="178"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <locale key="locale" localeIdentifier="tr_TR"/>
+                                            </datePicker>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IY4-KG-8fl">
+                                                <rect key="frame" x="22" y="369" width="320" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                                <color key="textColor" red="0.3335945543309019" green="0.39443760418025431" blue="0.50930715344615818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sınav Ekle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ide-PH-HTF">
+                                        <rect key="frame" x="125" y="12" width="143" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dersin Detaylarını Giriniz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imM-Li-aeb">
+                                        <rect key="frame" x="14" y="70" width="365" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.87064009899999995" green="0.87045413260000004" blue="0.87843245270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tsi-na-7I6"/>
+                        <color key="backgroundColor" red="0.87064009899999995" green="0.87045413260000004" blue="0.87843245270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Yu5-D8-XkI" firstAttribute="bottom" secondItem="tsi-na-7I6" secondAttribute="bottom" id="ajo-kl-uu9"/>
+                            <constraint firstItem="Yu5-D8-XkI" firstAttribute="trailing" secondItem="tsi-na-7I6" secondAttribute="trailing" id="bzG-Gi-w3i"/>
+                            <constraint firstItem="Yu5-D8-XkI" firstAttribute="top" secondItem="tsi-na-7I6" secondAttribute="top" id="vZK-mN-mKc"/>
+                            <constraint firstItem="Yu5-D8-XkI" firstAttribute="leading" secondItem="tsi-na-7I6" secondAttribute="leading" id="xui-7c-7d5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="HkO-bu-nCr"/>
+                    <connections>
+                        <outlet property="contentView" destination="ab0-Gr-cZN" id="hmx-pN-xHW"/>
+                        <outlet property="dateTimeLabel" destination="IY4-KG-8fl" id="oro-5T-V0O"/>
+                        <outlet property="dateView" destination="H5h-40-yDm" id="BFj-X2-Bb4"/>
+                        <outlet property="examDatePicker" destination="pCf-Db-ioH" id="e56-la-fWv"/>
+                        <outlet property="locationTextField" destination="n1q-4v-th7" id="XNy-Ld-Z41"/>
+                        <outlet property="saveButtonisEnabled" destination="gpV-eE-Uuc" id="zdc-rk-QCo"/>
+                        <outlet property="subjectTextField" destination="wh1-wN-FAi" id="zfr-Xr-cWo"/>
+                        <outlet property="titleTextField" destination="s0L-c4-KIb" id="3zY-DB-zxc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N9S-r6-OJS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838.93129770992368" y="554.92957746478874"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendar.badge.clock" catalog="system" width="128" height="108"/>
+        <image name="character.textbox" catalog="system" width="128" height="89"/>
+        <image name="location" catalog="system" width="128" height="121"/>
+        <image name="plus.app.fill" catalog="system" width="128" height="114"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="text.viewfinder" catalog="system" width="128" height="115"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
