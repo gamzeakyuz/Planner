@@ -1,2 +1,2 @@
 # Planner
-swift app
+Core Data ve UserNotifications kullanarak planlayıcı oluşturma
